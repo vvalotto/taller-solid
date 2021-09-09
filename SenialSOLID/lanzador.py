@@ -32,20 +32,10 @@ class Lanzador:
         return
 
     @staticmethod
-    def informar_versiones():
-        os.system("clear")
-        print("Versiones de los componenetes")
-        print("adquisidor: " + adquisidor.__version__)
-        print("procesador: " + procesador.__version__)
-        print("visualizador: " + visualizador.__version__)
-        print("modelo: " + modelo.__version__)
-
-    @staticmethod
     def ejecutar():
         """
         Se instancian las clases que participan del procesamiento
         """
-        Lanzador.informar_versiones()
         Lanzador.tecla()
 
         mi_adquisidor = Adquisidor(5)

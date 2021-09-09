@@ -1,14 +1,14 @@
 
-import senial
 
-from senial.senial import *
+
+from SenialSOLID.modelo.modelo import Senial
 
 
 
 class Adquisidor:
     def __init__(self,p_tamanio):
         self.__tamanio = p_tamanio
-        self.__buffer = Senial(self.__tamanio)
+        self.__buffer = Senial()
 
     def _leer_dato(self):
         pass

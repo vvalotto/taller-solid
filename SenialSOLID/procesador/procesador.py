@@ -1,7 +1,7 @@
 """
 Define la clase procesador de la senial
 """
-from SenialSOLID.modelo.senial import *
+from SenialSOLID.modelo.modelo import *
 
 
 class Procesador:
