@@ -56,7 +56,8 @@ class ProcesadorAmplificador(BaseProcesador):
         :return:
         """
         print("Procesando...")
-        self._senial_procesada.valores = list(map(self._amplificar, senial.valores))
+        for i in range(0, senial.tamanio):
+            self._senial_procesada.poner_valor(self._amplificar(senial.sacar_valor()))
         self._senial_procesada.cantidad += len(self._senial_procesada.valores)
         return
 
@@ -89,7 +90,8 @@ class ProcesadorConUmbral(BaseProcesador):
         :return:
         """
         print("Procesando con umbral")
-        self._senial_procesada.valores = list(map(self._funcion_umbral, senial.valores))
+        for i in range(0, senial.tamanio):
+            self._senial_procesada.poner_valor(self._funcion_umbral(senial.sacar_valor()))
         self._senial_procesada.cantidad += len(self._senial_procesada.valores)
         return
 
